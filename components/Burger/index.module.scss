@@ -1,0 +1,53 @@
+.burgerWrapper {
+}
+
+.burgerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--black);
+  transition: all 0.3s ease;
+}
+
+.active .bar1 {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.active .bar2 {
+  opacity: 0;
+}
+
+.active .bar3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--black);
+  padding: 3em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  transition: right 0.3s ease;
+  z-index: 1000;
+
+  .link {
+    color: var(--white);
+  }
+}
+
+.menu.active {
+  right: 0;
+}
