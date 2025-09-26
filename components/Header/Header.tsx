@@ -3,8 +3,11 @@ import styles from "./index.module.scss";
 
 export default function Header() {
   return (
-    <header className={`container ${styles.header}`}>
-      <Burger></Burger>
+    <header className={styles.header}>
+      <div className={`container ${styles.innerHeader}`}>
+        <>123</>
+        <Burger></Burger>
+      </div>
     </header>
   );
 }

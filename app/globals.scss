@@ -1,7 +1,7 @@
 :root {
-  --background: #ffffff;
   --black: #0f0f0f;
   --white: #fff;
+  --viol: #7f4ee3;
 }
 
 html,
@@ -16,6 +16,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
 }
 
 * {
@@ -27,6 +28,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: 0.2s ease;
+
+  &:hover {
+    transition: 0.2s ease;
+    color: var(--viol);
+  }
 }
 
 ul {

@@ -1,7 +1,11 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  height: 90px;
-  align-items: center;
-  padding: 0px 10px;
+  background: linear-gradient(135deg, #ca61c3, #7f4ee3);
+  // background-color: var(--viol);
+
+  .innerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+  }
 }
