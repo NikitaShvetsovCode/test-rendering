@@ -7,17 +7,35 @@
   margin-top: 100px;
 
   .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid var(--border);
     max-width: 350px;
     padding: 30px 30px 25px;
     border-radius: 5px;
 
     .label {
-      margin-bottom: auto;
+      margin-bottom: 30px;
     }
+  }
 
-    .button {
-      margin-top: auto;
+  .button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--viol);
+    color: var(--viol);
+    transition: 0.15s ease;
+
+    &:hover {
+      background-color: var(--viol);
+      color: var(--white);
+      transition: 0.15s ease;
     }
   }
 }

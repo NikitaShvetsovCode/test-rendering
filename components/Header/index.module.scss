@@ -1,11 +1,15 @@
 .header {
   background: linear-gradient(135deg, #ca61c3, #7f4ee3);
-  // background-color: var(--viol);
+  padding: 0 25px;
 
   .innerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 20px;
+    padding: 10px 0;
+
+    .imageLogo {
+      object-fit: contain;
+    }
   }
 }
