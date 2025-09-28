@@ -1,1 +1,23 @@
+.menu {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  margin-top: 100px;
 
+  .menuItem {
+    border: 1px solid var(--border);
+    max-width: 350px;
+    padding: 30px 30px 25px;
+    border-radius: 5px;
+
+    .label {
+      margin-bottom: auto;
+    }
+
+    .button {
+      margin-top: auto;
+    }
+  }
+}
