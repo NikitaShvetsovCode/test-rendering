@@ -10,7 +10,7 @@ export default function Header() {
         <Link href="/">
           <Image
             src="/kube-logo.png"
-            alt="Поиск работы без стресса: как автоотклики экономят время и нервы"
+            alt="logo"
             width={47}
             height={45}
             className={styles.imageLogo}

@@ -1,13 +1,12 @@
 .header {
   background: linear-gradient(135deg, #ca61c3, #7f4ee3);
-  padding: 0 25px;
 
   .innerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
     .imageLogo {
       object-fit: contain;
     }
