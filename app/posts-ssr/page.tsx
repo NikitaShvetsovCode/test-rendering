@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 async function getPosts(): Promise<Post[]> {
   try {
     const res = await fetch("https://dummyjson.com/posts", {
-      cache: "no-store",
+      cache: "no-store", // Данные всегда запрашиваются заново
     });
     if (!res.ok) throw new Error("Failed to fetch");
     const data = await res.json();
