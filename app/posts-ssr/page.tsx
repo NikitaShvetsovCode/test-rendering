@@ -20,7 +20,7 @@ export default async function PostsSSR() {
 
   return (
     <div className={`container ${styles.posts}`}>
-      <h1>SSR — Server-Side Rendering</h1>
+      <h1 className={styles.h1}>SSR — Server-Side Rendering</h1>
       <ul className={styles.postsContainer}>
         {posts.slice(0, 20).map((post: any) => (
           <li key={post.id} className={styles.post}>
