@@ -1,16 +1,17 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./index.module.scss";
+import { useParams } from "next/navigation";
 
-export default function PostCSR({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+type Post = { id: number; title: string; body: string };
+
+export default function PostCSR() {
+  const params = useParams();
+  const id = params?.id;
+
   const [post, setPost] = useState<Post | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { id } = use(params);
 
   useEffect(() => {
     async function getPost() {

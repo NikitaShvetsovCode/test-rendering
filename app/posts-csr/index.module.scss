@@ -1,5 +1,5 @@
 .posts {
-  margin-top: 40px;
+  margin-top: 120px;
 
   .postsContainer {
     display: grid;
@@ -66,7 +66,7 @@
   }
 
   @media (max-width: 450px) {
-    margin-top: 25px;
+    margin-top: 110px;
     .postsContainer {
       grid-template-columns: auto;
     }

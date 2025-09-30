@@ -1,5 +1,8 @@
 .header {
   background: linear-gradient(135deg, #ca61c3, #7f4ee3);
+  position: fixed;
+  width: 100%;
+  z-index: 4000;
 
   .innerHeader {
     display: flex;
