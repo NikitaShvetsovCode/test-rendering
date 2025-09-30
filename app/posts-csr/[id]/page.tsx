@@ -13,7 +13,7 @@ export default function PostCSR({
   const { id } = use(params);
 
   useEffect(() => {
-    async function loadPost() {
+    async function getPost() {
       try {
         const res = await fetch(`https://dummyjson.com/posts/${id}`);
         if (!res.ok) throw new Error("Failed to fetch");
@@ -24,7 +24,7 @@ export default function PostCSR({
         setError("Ошибка загрузки поста");
       }
     }
-    loadPost();
+    getPost();
   }, [id]);
 
   if (error) return <div>{error}</div>;
