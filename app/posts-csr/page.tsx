@@ -9,9 +9,9 @@ export default function PostsCSR() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    async function loadPosts() {
+    async function getPosts() {
       try {
-        const res = await fetch("https://dummyjson.com/posts");
+        const res = await fetch("/api/posts");
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
         setPosts(data.posts);
@@ -20,7 +20,7 @@ export default function PostsCSR() {
         setError("Ошибка загрузки постов");
       }
     }
-    loadPosts();
+    getPosts();
   }, []);
 
   if (error) return <div>{error}</div>;
@@ -29,7 +29,7 @@ export default function PostsCSR() {
     <div className={`container ${styles.posts}`}>
       <h1 className={styles.h1}>CSR — Client-Side Rendering</h1>
       <ul className={styles.postsContainer}>
-        {posts.slice(0, 20).map((post: any) => (
+        {posts.slice(0, 20).map((post: Post) => (
           <li key={post.id} className={styles.post}>
             <div className={styles.title}>{post.title}</div>
             <Link href={`/posts-csr/${post.id}`} className={styles.moreButton}>

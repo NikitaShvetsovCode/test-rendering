@@ -15,7 +15,7 @@ export default function PostCSR({
   useEffect(() => {
     async function getPost() {
       try {
-        const res = await fetch(`https://dummyjson.com/posts/${id}`);
+        const res = await fetch(`/api/posts/${id}`);
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
         setPost(data);

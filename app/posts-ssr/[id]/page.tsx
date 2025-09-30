@@ -13,8 +13,13 @@ async function getPost(id: string) {
   }
 }
 
-export default async function PostSSR({ params }: { params: { id: string } }) {
-  const post = await getPost(params.id);
+export default async function PostSSR({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const post = await getPost(id);
 
   if (!post) return <div>Ошибка загрузки поста</div>;
 
