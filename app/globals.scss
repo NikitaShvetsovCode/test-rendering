@@ -50,3 +50,19 @@ ul {
     padding: 0 15px;
   }
 }
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 5000;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}

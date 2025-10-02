@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/Header/Header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const nunitoSans = Nunito_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -22,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${nunitoSans.variable}`}>
+        <ToastContainer />
         <Header />
         <main>{children}</main>
       </body>

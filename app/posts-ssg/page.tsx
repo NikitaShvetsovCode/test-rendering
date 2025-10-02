@@ -22,7 +22,7 @@ export default async function PostsSSG() {
     <div className={`container ${styles.posts}`}>
       <h1 className={styles.h1}>SSG — Static Site Generation</h1>
       <ul className={styles.postsContainer}>
-        {posts.slice(0, 20).map((post: any) => (
+        {posts.slice(0, 20).map((post: Post) => (
           <li key={post.id} className={styles.post}>
             <div className={styles.title}>{post.title}</div>
             <Link href={`/posts-ssg/${post.id}`} className={styles.moreButton}>

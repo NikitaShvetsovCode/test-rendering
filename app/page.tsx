@@ -3,8 +3,14 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "./page.module.scss";
+import stylesModal from "@/components/Modal/index.module.scss";
+import Modal from "react-modal";
+import { useState } from "react";
+import ModalMain from "@/components/Modal/ModalMain";
 
 export default function Home() {
+  const [modalOpen, setIsModalOpen] = useState<boolean>(false);
+
   const links = [
     {
       href: "/posts-ssr",
@@ -24,6 +30,11 @@ export default function Home() {
       label: "CSR — Client-Side Rendering (Клиентский рендеринг)",
     },
   ];
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "";
+  };
 
   return (
     <nav>
@@ -45,6 +56,26 @@ export default function Home() {
             </motion.li>
           ))}
         </ul>
+        <h2 className={styles.h2}>Модальное окно</h2>
+        <div
+          className={styles.button}
+          onClick={() => {
+            setIsModalOpen(true);
+          }}
+        >
+          Открыть
+        </div>
+
+        <Modal
+          className={stylesModal.modal}
+          overlayClassName={stylesModal.overlayModal}
+          isOpen={modalOpen}
+          onRequestClose={closeModal}
+          closeTimeoutMS={200}
+          ariaHideApp={false}
+        >
+          {modalOpen && <ModalMain />}
+        </Modal>
       </div>
     </nav>
   );
